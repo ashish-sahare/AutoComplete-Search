@@ -1,0 +1,5 @@
+<%= form_with url: search_movies_path, method: :post do |form| %>
+	<%= form.search_field :query, value: params[:query], oninput: "this.form.requestSubmit()"	%>
+<% end %>
+
+<div id="search_results"></div>

@@ -1,0 +1,8 @@
+<%= movies.count %>
+
+<% movies.each do |movie| %>
+	<br>
+	<%= link_to movie do %>
+		<%= highlight(movie.title, params[:query]) %>
+	<% end %>
+<% end %>
