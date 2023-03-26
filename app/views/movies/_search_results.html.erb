@@ -3,6 +3,6 @@
 <% movies.each do |movie| %>
 	<br>
 	<%= link_to movie do %>
-		<%= highlight(movie.title, params[:query]) %>
+		<%= highlight(movie.title, params.dig(:query)) %>
 	<% end %>
 <% end %>

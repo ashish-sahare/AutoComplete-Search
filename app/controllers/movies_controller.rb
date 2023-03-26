@@ -7,7 +7,7 @@ class MoviesController < ApplicationController
   end
 
   def search
-    if params[:query].present?
+    if params.dig(:query).present?
       @movies = Movie.filter_by_title(params[:query])
     else
       @movies = []
