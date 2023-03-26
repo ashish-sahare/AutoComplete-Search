@@ -8,7 +8,7 @@ class MoviesController < ApplicationController
 
   def search
     if params[:query].present?
-      @movies = Movie.where("title ILIKE ?", "%#{params[:query]}%")
+      @movies = Movie.filter_by_title(params[:query])
     else
       @movies = []
     end
